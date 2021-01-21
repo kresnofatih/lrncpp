@@ -4,6 +4,10 @@ using namespace std;
 int main(){
     int a;
     cin >> a;
-    cout << a << endl;
+    if (a%2==0){
+        cout << "even" << endl;
+    } else {
+        cout << "odd" << endl;
+    }
     return 0;
 }
