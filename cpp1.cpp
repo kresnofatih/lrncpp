@@ -4,10 +4,12 @@ using namespace std;
 int main(){
     int a;
     cin >> a;
-    if (a%2==0){
-        cout << "even" << endl;
+    if (a<0){
+        cout << "ice" << endl;
+    } else if (a>=0 && a<100){
+        cout << "water" << endl;
     } else {
-        cout << "odd" << endl;
+        cout << "gas" << endl;
     }
     return 0;
 }
