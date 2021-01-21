@@ -2,14 +2,13 @@
 using namespace std;
 
 int main(){
-    int a;
+    int a, i;
+    i = 0;
     cin >> a;
-    if (a<0){
-        cout << "ice" << endl;
-    } else if (a>=0 && a<100){
-        cout << "water" << endl;
-    } else {
-        cout << "gas" << endl;
+    while (i<=a){
+        cout << i << endl;
+        i+=1;
     }
+    cout << "complete" << endl;
     return 0;
 }
