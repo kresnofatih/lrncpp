@@ -1,16 +1,14 @@
 #include <iostream>
 
 int main(){
-    int a = 1;
-    int b = 2;
-    int c = 0;
+    int a = 7;
 
-    std::cout << !(a==1) << std::endl;//0 (false)
-    std::cout << (a!=3) << std::endl;//1 (true)
-    std::cout << !(a==b) << std::endl;//1 (true)
-    std::cout << (a&&b) << std::endl;//1 (true)
-    std::cout << (a&&c) << std::endl;//0 (false)
-    std::cout << (a||b) << std::endl;//1 (true)
-    std::cout << (a||c) << std::endl;//1 (true)
+    if (a==4){
+        std::cout << "a==4" << std::endl;
+    } else if(a==7){
+        std::cout << "a==7" << std::endl;
+    } else {
+        std::cout << "a!=4" << std::endl;
+    }
     return 0;
 }
