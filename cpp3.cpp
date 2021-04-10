@@ -2,20 +2,15 @@
 
 int main(){
     int a = 1;
-    int b = 9;
+    int b = 2;
+    int c = 0;
 
-    std::cout << (a==b) << std::endl;//0
-    std::cout << sizeof(a==b) << std::endl;//1
-    std::cout << (a!=b) << std::endl;//1
-    std::cout << sizeof(a==b) << std::endl;//1
-    std::cout << (a&&b) << std::endl;//1
-    std::cout << sizeof(a&&b) << std::endl;//1
-    std::cout << std::endl;
-    bool c = true;
-    bool d = false;
-    std::cout << (c&&d) << std::endl;//0
-    std::cout << sizeof(c&&d) << std::endl;//1
-    std::cout << (c||d) << std::endl;//1
-    std::cout << sizeof(c||d) << std::endl;//1
+    std::cout << !(a==1) << std::endl;//0 (false)
+    std::cout << (a!=3) << std::endl;//1 (true)
+    std::cout << !(a==b) << std::endl;//1 (true)
+    std::cout << (a&&b) << std::endl;//1 (true)
+    std::cout << (a&&c) << std::endl;//0 (false)
+    std::cout << (a||b) << std::endl;//1 (true)
+    std::cout << (a||c) << std::endl;//1 (true)
     return 0;
 }
