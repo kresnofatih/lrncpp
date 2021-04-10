@@ -14,7 +14,6 @@ int main(){
     return 0;
 }
 
-
 float getResult(float a, float b, int op){
     float res;
     switch(op){
