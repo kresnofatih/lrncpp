@@ -1,31 +1,29 @@
 #include <iostream>
 
-int kuadrat(int x){
-    int y;
-    y=x*x;
-    return y;
+int x = 20;
+
+int getX(){
+    return x;
 }
 
-int tambah(int x, int y){
-    return (x+y);
-}
-
-void printTigaKali(int x){
-    std::cout << x << std::endl;
-    std::cout << x << std::endl;
-    std::cout << x << std::endl;
+int xLocal(){
+    int x = 5;
+    return x;
 }
 
 int main(){
-    int hasil = kuadrat(3);
-    std::cout << hasil << std::endl;
+    std::cout << x << std::endl;//20 (global)
+    int x = 8;
+    std::cout << x << std::endl;//8 (local main)
+    std::cout << getX() << std::endl;//20 (global)
+    std::cout << xLocal() << std::endl;//5 (local x_local)
+    std::cout << x << std::endl;//8 (local main)
 
-    hasil = tambah(2, 8);
-    std::cout << hasil << std::endl;
-
-    int s = 5;
-    printTigaKali(s);
-
-
+    {
+        std::cout << x << std::endl;//8 (local main)
+        int x = 7;
+        std::cout << x << std::endl;//7 (block)
+    }
+    std::cout << x << std::endl;//8 (local main)
     return 0;
 }
