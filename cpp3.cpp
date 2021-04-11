@@ -1,23 +1,31 @@
 #include <iostream>
 
-int main(){
-    int finalIndex = 10;
-    int b, c, d;
+int kuadrat(int x){
+    int y;
+    y=x*x;
+    return y;
+}
 
-    for(int a = 0; a<=finalIndex; a++){
-        if (a==0){
-            b=1;
-            std::cout << b << " ";
-        } else if(a==1){
-            b=1;
-            c=1;
-            std::cout << b << " ";
-        } else {
-            d=b;
-            b=b+c;
-            c=d;
-            std::cout << b << " ";
-        }
-    }
+int tambah(int x, int y){
+    return (x+y);
+}
+
+void printTigaKali(int x){
+    std::cout << x << std::endl;
+    std::cout << x << std::endl;
+    std::cout << x << std::endl;
+}
+
+int main(){
+    int hasil = kuadrat(3);
+    std::cout << hasil << std::endl;
+
+    hasil = tambah(2, 8);
+    std::cout << hasil << std::endl;
+
+    int s = 5;
+    printTigaKali(s);
+
+
     return 0;
 }
