@@ -1,29 +1,13 @@
 #include <iostream>
 
-int x = 20;
-
-int getX(){
-    return x;
-}
-
-int xLocal(){
-    int x = 5;
-    return x;
-}
+float cubeVolume(float p, float l, float t=4);
 
 int main(){
-    std::cout << x << std::endl;//20 (global)
-    int x = 8;
-    std::cout << x << std::endl;//8 (local main)
-    std::cout << getX() << std::endl;//20 (global)
-    std::cout << xLocal() << std::endl;//5 (local x_local)
-    std::cout << x << std::endl;//8 (local main)
-
-    {
-        std::cout << x << std::endl;//8 (local main)
-        int x = 7;
-        std::cout << x << std::endl;//7 (block)
-    }
-    std::cout << x << std::endl;//8 (local main)
+    std::cout << cubeVolume(2.3, 3.2, 3.4) << std::endl;
+    std::cout << cubeVolume(2.3, 3.2) << std::endl;
     return 0;
+}
+
+float cubeVolume(float p, float l, float t){
+    return p*l*t;
 }
