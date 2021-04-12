@@ -1,17 +1,9 @@
 #include <iostream>
 
-int fibonacci(int a){
-    if(a>2){
-        return fibonacci(a-1)+fibonacci(a-2);
-    } else {
-        return 1;
-    }
-}
-
 int main(){
-    for(int a = 1; a<20; a++){
-        std::cout << fibonacci(a) << " ";
-    }
-    std::cout << std::endl;
+    int a = 3;
+    int &b = a;
+    a = 5;
+    std::cout << a << " " << b << std::endl;
     return 0;
 }
