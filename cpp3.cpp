@@ -1,13 +1,22 @@
 #include <iostream>
 
-float cubeVolume(float p, float l, float t=4);
-
-int main(){
-    std::cout << cubeVolume(2.3, 3.2, 3.4) << std::endl;
-    std::cout << cubeVolume(2.3, 3.2) << std::endl;
-    return 0;
+// basic function
+int boxArea(int p, int l){
+    return p*l;
 }
 
-float cubeVolume(float p, float l, float t){
-    return p*l*t;
+// overload function
+int boxArea(int p){
+    return p*p;
+}
+
+float boxArea(float p){
+    return p*p;
+}
+
+int main(){
+    std::cout << boxArea(2, 4) << std::endl;
+    std::cout << boxArea(2) << std::endl;
+    std::cout << boxArea(3.3f) << std::endl;
+    return 0;
 }
