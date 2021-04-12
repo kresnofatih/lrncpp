@@ -1,15 +1,17 @@
 #include <iostream>
 
-int faktorial(int a){
-    if(a==1){
-        return a;
+int fibonacci(int a){
+    if(a>2){
+        return fibonacci(a-1)+fibonacci(a-2);
     } else {
-        return a*faktorial(a-1);
+        return 1;
     }
 }
 
 int main(){
-    
-    std::cout << faktorial(4) << std::endl;
+    for(int a = 1; a<20; a++){
+        std::cout << fibonacci(a) << " ";
+    }
+    std::cout << std::endl;
     return 0;
 }
