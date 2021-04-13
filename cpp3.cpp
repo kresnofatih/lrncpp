@@ -1,37 +1,15 @@
 #include <iostream>
 
 int main(){
-    int a[5];
-    int b[5];
-    a[0]=0;
-    a[1]=1;
-    a[2]=2;
-    a[3]=3;
-    a[4]=4;
-    std::cout << a <<" "<< b << std::endl;//address
-    std::cout << sizeof(a)/sizeof(int) << std::endl;//address
+    int nilai[10] = {0,1,2,3,4,5,6,7,8,9};
 
-    std::cout << &a[0] << " " << a << std::endl;//0x61fe00 0x61fe00 (same)
+    for(int n: nilai){
+        std::cout << n << " " << &n << std::endl;
+    }
     std::cout << std::endl;
-
-    // 0
-    // 1
-    // 2
-    // 3
-    // 4
-    // 0x61fe00
-    // 0x61fe04
-    // 0x61fe08
-    // 0x61fe0c
-    std::cout << *a << std::endl;
-    std::cout << *(a+1) << std::endl;
-    std::cout << *(a+2) << std::endl;
-    std::cout << *(a+3) << std::endl;
-    std::cout << *(a+4) << std::endl;
-    std::cout << &a[0] << std::endl;
-    std::cout << &a[1] << std::endl;
-    std::cout << &a[2] << std::endl;
-    std::cout << &a[3] << std::endl;
-    std::cout << &a[4] << std::endl;
+    for(int &n: nilai){
+        n*=2;
+        std::cout << n << " " << &n << std::endl;
+    }
     return 0;
 }
