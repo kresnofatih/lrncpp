@@ -1,20 +1,37 @@
 #include <iostream>
 
 int main(){
-    int x = 5;
-    int* y = &x;
-    int z = 39;
-    std::cout << &x << " " << y << " " << &z << std::endl;//address address address2
-    std::cout << x << " " << *y << " " << z << std::endl;//5 5 39
+    int a[5];
+    int b[5];
+    a[0]=0;
+    a[1]=1;
+    a[2]=2;
+    a[3]=3;
+    a[4]=4;
+    std::cout << a <<" "<< b << std::endl;//address
+    std::cout << sizeof(a)/sizeof(int) << std::endl;//address
 
-    *y = 3;
-    std::cout << &x << " " << y << " " << &z << std::endl;//address address address2
-    std::cout << x << " " << *y << " " << z << std::endl;//3 3 39
+    std::cout << &a[0] << " " << a << std::endl;//0x61fe00 0x61fe00 (same)
+    std::cout << std::endl;
 
-    y = &z;
-    std::cout << &x << " " << y << " " << &z << std::endl;//address address
-    std::cout << x << " " << *y << " " << z << std::endl;//3 39 39
-
-
+    // 0
+    // 1
+    // 2
+    // 3
+    // 4
+    // 0x61fe00
+    // 0x61fe04
+    // 0x61fe08
+    // 0x61fe0c
+    std::cout << *a << std::endl;
+    std::cout << *(a+1) << std::endl;
+    std::cout << *(a+2) << std::endl;
+    std::cout << *(a+3) << std::endl;
+    std::cout << *(a+4) << std::endl;
+    std::cout << &a[0] << std::endl;
+    std::cout << &a[1] << std::endl;
+    std::cout << &a[2] << std::endl;
+    std::cout << &a[3] << std::endl;
+    std::cout << &a[4] << std::endl;
     return 0;
 }
