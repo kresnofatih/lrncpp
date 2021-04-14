@@ -1,15 +1,15 @@
 #include <iostream>
+#include <string>
 
 int main(){
-    int nilai[10] = {0,1,2,3,4,5,6,7,8,9};
+    char kata[5] = {'m', 'o', 'b', 'i', 'l'};
 
-    for(int n: nilai){
-        std::cout << n << " " << &n << std::endl;
+    for(char &c: kata){
+        std::cout << c;
     }
-    std::cout << std::endl;
-    for(int &n: nilai){
-        n*=2;
-        std::cout << n << " " << &n << std::endl;
-    }
+
+    std::string kata2("kucing");
+
+    std::cout << std::endl << kata2;
     return 0;
 }
