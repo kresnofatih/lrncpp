@@ -2,14 +2,13 @@
 #include <string>
 
 int main(){
-    char kata[5] = {'m', 'o', 'b', 'i', 'l'};
+    std::string input("fatih");
+    std::string kata("fatih");
 
-    for(char &c: kata){
-        std::cout << c;
+    if(input == kata){
+        std::cout << "correct" << std::endl;
+    } else {
+        std::cout << "incorrect" << std::endl;
     }
-
-    std::string kata2("kucing");
-
-    std::cout << std::endl << kata2;
     return 0;
 }
