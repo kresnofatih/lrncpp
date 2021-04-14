@@ -10,5 +10,7 @@ int main(){
     } else {
         std::cout << "incorrect" << std::endl;
     }
+
+    std::cout << kata.substr(1, 3);
     return 0;
 }
